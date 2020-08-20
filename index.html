@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>html and css full screen slide in navigation bar</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="banner">
+      <div class="nav1">
+        <div class="logo">LOGO</div>
+        <i class="fa fa-bars" id="bars"></i>
+      </div>
+      <div class="info">
+        <h1>FULL SCREEN SLIDE IN NAVIGATION BAR</h1>
+        <p>USING HTML , CSS AND JAVASCRIPT</p>
+      </div>
+      <div class="nav2" id="nav2">
+        <div class="close"><i class="fa fa-times" id="close"></i></div>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">VIDEOS</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">PORTFOLIO</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function navbar() {
+        var nav = document.getElementById("bars");
+        var close = document.getElementById("close");
+
+        nav.addEventListener("click", opennav, false);
+        close.addEventListener("click", closenav, false);
+      }
+      window.onload = navbar;
+
+      function opennav() {
+        var nav2 = document.getElementById("nav2");
+
+        nav2.style.margin = "0";
+      }
+
+      function closenav() {
+        var nav2 = document.getElementById("nav2");
+
+        nav2.style.marginLeft = "100%";
+      }
+    </script>
+  </body>
+</html>
